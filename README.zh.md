@@ -72,6 +72,10 @@ ds bot 拥有群聊功能。群聊是非常好的多 bot 协作方式，但它�
 
 所有数据都在你自己的电脑上，在 dsh 主目录（默认 `~/.dsh`）的 `bot/` 和 `sessions/` 里。卸载插件不会删除这些数据。
 
+## JiuwenSwarm 后端
+
+独立后端与简易浏览器客户端位于 [`jiuwen-bot/`](jiuwen-bot/README.zh.md)，包含确定性演示、Chief/Worker 对话、流式输出、审批与历史记录。真实 Python 运行及目标 Mac 验收仍待完成。
+
 ## 开发
 
 插件源码在 [`ds-bot/`](ds-bot/)。配置项和内部结构见 [`ds-bot/README.md`](ds-bot/README.md)，开发和测试见 [CONTRIBUTING.md](CONTRIBUTING.md)，版本变化见 [CHANGELOG.md](CHANGELOG.md)。

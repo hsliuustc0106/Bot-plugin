@@ -1,0 +1,32 @@
+name: Jiuwen Bot
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  fixture:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: jiuwen-bot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: jiuwen-bot/package-lock.json
+      - run: npm ci --no-fund --no-audit
+      - run: npm run setup:sdk
+      - run: npm run doctor -- --mock
+      - run: npm test
+      - run: npm run lint
+      - run: npm run smoke
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
