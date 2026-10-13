@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/openJiuwen-ai/jiuwenswarm.git",
+  "revision": "8315c183a5d02fdab1674ab5120449c1d4b6728c",
+  "python": ">=3.11,<3.14",
+  "schemaVersion": "0.1",
+  "protocolRevision": 1
+}
