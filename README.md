@@ -78,6 +78,10 @@ In **Settings** → **Usage**, you can see token usage by time, by bot and by mo
 
 All data stays on your own computer, in `bot/` and `sessions/` in the DSH home folder (`~/.dsh` by default). Uninstalling the plugin does not delete this data.
 
+## JiuwenSwarm backend
+
+An independent backend and small browser client are available in [`jiuwen-bot/`](jiuwen-bot/README.md). It includes a deterministic demo, Chief/Worker conversations, streaming, approvals and saved history. Live Python and target-Mac acceptance are still pending.
+
 ## Development
 
 The plugin source is in [`ds-bot/`](ds-bot/). For options and internals, see [`ds-bot/README.md`](ds-bot/README.md). For development and tests, see [CONTRIBUTING.md](CONTRIBUTING.md). For changes between versions, see [CHANGELOG.md](CHANGELOG.md).

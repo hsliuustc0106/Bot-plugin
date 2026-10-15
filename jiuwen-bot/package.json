@@ -1,0 +1,23 @@
+{
+  "name": "jiuwen-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "start": "node apps/api/main.mjs",
+    "dev": "node apps/api/main.mjs --mock",
+    "setup:sdk": "node scripts/setup-sdk.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "lint": "oxlint apps packages scripts tests",
+    "test:browser": "node scripts/browser-smoke.mjs"
+  },
+  "devDependencies": {
+    "oxlint": "1.56.0",
+    "playwright": "1.64.0"
+  }
+}

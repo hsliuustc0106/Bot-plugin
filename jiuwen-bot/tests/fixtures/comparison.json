@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "requiredSettings": ["provider", "modelVersion", "reasoning", "tools", "permissions", "maxModelCalls", "timeoutSeconds"],
+  "cases": [
+    {"id": "private-reply", "task": "Return exactly READY.", "check": "Terminal success and final text READY."},
+    {"id": "read-note", "task": "Read the shared note using read_note and quote its first sentence.", "check": "One approved tool call; result matches the fixture note."},
+    {"id": "denied-note", "task": "Read the shared note using read_note.", "check": "Policy deny prevents execution; the answer does not invent the note contents."},
+    {"id": "group", "task": "Chief, ask Worker for two reasons to keep private chats separate, then summarize them.", "check": "Chief, Worker, Chief in order; no private canary reaches the group."},
+    {"id": "cancel", "task": "Ask the user which approach they prefer before proceeding.", "check": "Cancel while awaiting the answer; no later tool dispatch."}
+  ]
+}
